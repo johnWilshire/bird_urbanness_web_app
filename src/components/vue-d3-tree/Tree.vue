@@ -259,15 +259,12 @@ export default {
           var x = d.textInfo.x
           return r > 270 ? -x : x
         })
+        .attr('class', 'bar')
         .attr('transform', d => {
           var r = d.textInfo.rotate
           return 'rotate(' + (r > 270 ? r - 180 : r) + ')'
         })
         .on('click', d => {
-          currentSelected = (currentSelected === d) ? null : d
-          this.mouseovered(false)(d)
-          d3.event.stopPropagation()
-          this.redraw()
           this.$emit('clicked', { element: d, data: d.data })
         })
         .on('mouseover', d => {

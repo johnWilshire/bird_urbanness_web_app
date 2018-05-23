@@ -15,7 +15,7 @@ div
                 th value
             tbody
               tr
-                td urbanness
+                td Urbanization Index
                 td {{selected.urban_median}}
               tr
                 td Mean Body size
@@ -23,6 +23,9 @@ div
               tr
                 td Clutch Size
                 td {{selected.clutch_size}}
+              tr
+                td Residual Brain Mass
+                td {{selected.brain_residual}}
         p(v-else) Mouse over a species to begin
   tree.tree(
     :data="treeData",
@@ -92,9 +95,9 @@ export default {
 label {
   padding-right: 1em;
 }
-.selected {
+/*.bar:hover {
   fill: #acdfb7;
-}
+}*/
 .tree {
   margin: 0 auto;
   height: 950px;

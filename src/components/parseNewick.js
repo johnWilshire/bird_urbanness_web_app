@@ -9,7 +9,7 @@ traitData.forEach(x => {
 var attributes = ['clutch_size', 'mean_body_size', 'urban_median',
   'response',
   'COMMON_NAME_ebird',
-  'SCIENTIFIC_NAME_ebird']
+  'SCIENTIFIC_NAME_ebird', 'brain_residual']
 
 // <!-- A modified version of  https://github.com/jasondavies/newick.js -->
 function parseNewick (s) {
